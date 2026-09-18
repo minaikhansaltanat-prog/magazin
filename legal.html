@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="legal.title">Юридические документы — 5K</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <div class="container-5k pt-10 pb-20 max-w-3xl mx-auto">
+    <h1 class="font-display font-bold text-3xl md:text-4xl mb-8 reveal" data-i18n="legal.title"></h1>
+
+    <div class="reviews-tabs mb-8 reveal" data-reviews-tabs>
+      <button type="button" class="reviews-tab active" data-reviews-tab="terms" data-i18n="legal.tabTerms"></button>
+      <button type="button" class="reviews-tab" data-reviews-tab="privacy" data-i18n="legal.tabPrivacy"></button>
+      <button type="button" class="reviews-tab" data-reviews-tab="loyalty" data-i18n="legal.tabLoyalty"></button>
+    </div>
+
+    <div data-reviews-panel="terms" id="terms" class="surface-card p-6 md:p-8 reveal">
+      <div class="text-ink-400 text-xs mb-4"><span data-i18n="legal.updated"></span>: 01.09.2026</div>
+      <p class="text-ink-600 leading-relaxed" data-i18n="legal.termsBody"></p>
+    </div>
+    <div data-reviews-panel="privacy" id="privacy" class="hidden surface-card p-6 md:p-8 reveal">
+      <div class="text-ink-400 text-xs mb-4"><span data-i18n="legal.updated"></span>: 01.09.2026</div>
+      <p class="text-ink-600 leading-relaxed" data-i18n="legal.privacyBody"></p>
+    </div>
+    <div data-reviews-panel="loyalty" id="loyalty" class="hidden surface-card p-6 md:p-8 reveal">
+      <div class="text-ink-400 text-xs mb-4"><span data-i18n="legal.updated"></span>: 01.09.2026</div>
+      <p class="text-ink-600 leading-relaxed" data-i18n="legal.loyaltyBody"></p>
+    </div>
+  </div>
+</main>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script>
+  FIVEK.mountLayout("legal");
+  var hash = (location.hash || "").replace("#", "");
+  if (hash) {
+    var tab = document.querySelector('[data-reviews-tab="' + hash + '"]');
+    if (tab) tab.click();
+  }
+</script>
+</body>
+</html>

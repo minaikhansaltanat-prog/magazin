@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="nav.game">5K Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <section class="hero-navy grain-surface overflow-hidden">
+    <div class="container-5k py-16 md:py-20 text-center reveal">
+      <span class="badge badge-yellow mb-4">5K Game</span>
+      <h1 class="font-display font-bold text-white text-3xl md:text-5xl mb-5 max-w-2xl mx-auto" data-i18n="game.heroTitle"></h1>
+      <p class="text-white/60 max-w-lg mx-auto" data-i18n="game.heroDesc"></p>
+    </div>
+  </section>
+
+  <section class="section-elevated">
+    <div class="container-5k py-12 md:py-16">
+      <div class="reviews-tabs justify-center flex flex-wrap mb-10" data-game-tabs>
+        <button type="button" class="reviews-tab active" data-game-tab="all" data-i18n="game.tabAll"></button>
+        <button type="button" class="reviews-tab" data-game-tab="daily" data-i18n="game.tabDaily"></button>
+        <button type="button" class="reviews-tab" data-game-tab="shopping" data-i18n="game.tabShopping"></button>
+        <button type="button" class="reviews-tab" data-game-tab="social" data-i18n="game.tabSocial"></button>
+        <button type="button" class="reviews-tab" data-game-tab="special" data-i18n="game.tabSpecial"></button>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="game-tasks"></div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script>
+  FIVEK.mountLayout("game");
+
+  var TASKS = [
+    { key: "login", cat: "daily", reward: 10, progress: 100 },
+    { key: "browse", cat: "daily", reward: 10, progress: 100 },
+    { key: "view", cat: "daily", reward: 15, progress: 40 },
+    { key: "buy", cat: "shopping", reward: 100, progress: 0 },
+    { key: "buyCat", cat: "shopping", reward: 150, progress: 0 },
+    { key: "review", cat: "shopping", reward: 40, progress: 60 },
+    { key: "share", cat: "social", reward: 20, progress: 0 },
+    { key: "invite", cat: "social", reward: 250, progress: 25 },
+    { key: "season", cat: "special", reward: 300, progress: 0 }
+  ];
+
+  var CAT_COLOR = { daily: "gold", shopping: "leaf", social: "gold", special: "leaf" };
+
+  function renderTasks(filter) {
+    var host = document.getElementById("game-tasks");
+    var list = filter === "all" ? TASKS : TASKS.filter(function (t) { return t.cat === filter; });
+    host.innerHTML = list.map(function (t) {
+      var done = t.progress >= 100;
+      var color = CAT_COLOR[t.cat];
+      return (
+        '<div class="surface-card p-6 reveal">' +
+          '<div class="flex items-center justify-between mb-4">' +
+            '<span class="w-11 h-11 rounded-xl ' + (color === "gold" ? "bg-gold-400/15 text-gold-600" : "bg-leaf-500/15 text-leaf-600") + ' flex items-center justify-center font-display font-bold">' + (done ? "✓" : "•") + '</span>' +
+            '<span class="badge ' + (done ? "badge-green" : "badge-outline") + '" data-i18n="game.status.' + (done ? "done" : "active") + '"></span>' +
+          '</div>' +
+          '<div class="font-bold mb-1" data-i18n="game.task.' + t.key + '.title"></div>' +
+          '<div class="text-ink-500 text-sm mb-4" data-i18n="game.task.' + t.key + '.desc"></div>' +
+          '<div class="h-1.5 bg-paper-100 rounded-full overflow-hidden mb-3"><div class="h-full rounded-full ' + (color === "gold" ? "bg-gold-400" : "bg-leaf-400") + '" style="width:' + t.progress + '%"></div></div>' +
+          '<div class="flex items-center justify-between text-xs text-ink-500"><span data-i18n="game.reward"></span><span class="font-bold text-gold-600">+' + t.reward + ' Points</span></div>' +
+        '</div>'
+      );
+    }).join("");
+    FIVEK.applyI18n(FIVEK.getLang());
+    FIVEK.refreshReveal();
+  }
+
+  document.addEventListener("click", function (e) {
+    var tab = e.target.closest("[data-game-tab]");
+    if (!tab) return;
+    document.querySelectorAll("[data-game-tab]").forEach(function (b) { b.classList.remove("active"); });
+    tab.classList.add("active");
+    renderTasks(tab.getAttribute("data-game-tab"));
+  });
+
+  document.addEventListener("5k:lang-changed", function () { renderTasks(document.querySelector(".reviews-tab.active").getAttribute("data-game-tab")); });
+  renderTasks("all");
+</script>
+</body>
+</html>

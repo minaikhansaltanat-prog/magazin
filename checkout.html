@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="checkout.title">Оформление заказа — 5K</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <div class="container-5k pt-8 pb-20">
+    <h1 class="font-display font-bold text-3xl md:text-4xl mb-8" data-i18n="checkout.title"></h1>
+
+    <div class="flex items-center gap-2 md:gap-4 mb-10 overflow-x-auto pb-1">
+      <div class="flex items-center gap-2 shrink-0"><span class="w-8 h-8 rounded-full bg-gold-400 text-navy-900 font-bold text-sm flex items-center justify-center">1</span><span class="font-semibold text-sm" data-i18n="checkout.step1"></span></div>
+      <span class="w-8 h-px bg-line shrink-0"></span>
+      <div class="flex items-center gap-2 shrink-0"><span class="w-8 h-8 rounded-full bg-paper-100 text-ink-500 font-bold text-sm flex items-center justify-center">2</span><span class="font-semibold text-sm text-ink-500" data-i18n="checkout.step2"></span></div>
+      <span class="w-8 h-px bg-line shrink-0"></span>
+      <div class="flex items-center gap-2 shrink-0"><span class="w-8 h-8 rounded-full bg-paper-100 text-ink-500 font-bold text-sm flex items-center justify-center">3</span><span class="font-semibold text-sm text-ink-500" data-i18n="checkout.step3"></span></div>
+      <span class="w-8 h-px bg-line shrink-0"></span>
+      <div class="flex items-center gap-2 shrink-0"><span class="w-8 h-8 rounded-full bg-paper-100 text-ink-500 font-bold text-sm flex items-center justify-center">4</span><span class="font-semibold text-sm text-ink-500" data-i18n="checkout.step4"></span></div>
+    </div>
+
+    <div class="grid lg:grid-cols-[1fr_360px] gap-10 items-start">
+      <form class="space-y-8" onsubmit="return false">
+        <div class="surface-card p-6">
+          <h2 class="font-display font-bold text-lg mb-5" data-i18n="checkout.step1"></h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div><label class="text-xs font-semibold text-ink-500 mb-1.5 block" data-i18n="checkout.name"></label><input type="text" class="w-full border border-line rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gold-400" /></div>
+            <div><label class="text-xs font-semibold text-ink-500 mb-1.5 block" data-i18n="checkout.phone"></label><input type="tel" placeholder="+7 (___) ___-__-__" class="w-full border border-line rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gold-400" /></div>
+            <div class="sm:col-span-2"><label class="text-xs font-semibold text-ink-500 mb-1.5 block" data-i18n="checkout.email"></label><input type="email" class="w-full border border-line rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gold-400" /></div>
+          </div>
+        </div>
+
+        <div class="surface-card p-6">
+          <h2 class="font-display font-bold text-lg mb-5" data-i18n="checkout.step2"></h2>
+          <div class="grid sm:grid-cols-2 gap-4 mb-5">
+            <div><label class="text-xs font-semibold text-ink-500 mb-1.5 block" data-i18n="checkout.city"></label><input type="text" value="Алматы" class="w-full border border-line rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gold-400" /></div>
+            <div><label class="text-xs font-semibold text-ink-500 mb-1.5 block" data-i18n="checkout.address"></label><input type="text" class="w-full border border-line rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gold-400" /></div>
+          </div>
+          <label class="text-xs font-semibold text-ink-500 mb-2 block" data-i18n="checkout.deliveryMethod"></label>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <label class="surface-card p-4 flex items-center gap-3 cursor-pointer"><input type="radio" name="delivery" checked class="accent-gold-400 w-4 h-4" /><span class="text-sm font-semibold" data-i18n="checkout.deliveryCourier"></span></label>
+            <label class="surface-card p-4 flex items-center gap-3 cursor-pointer"><input type="radio" name="delivery" class="accent-gold-400 w-4 h-4" /><span class="text-sm font-semibold" data-i18n="checkout.deliveryPickup"></span></label>
+          </div>
+        </div>
+
+        <div class="surface-card p-6">
+          <h2 class="font-display font-bold text-lg mb-5" data-i18n="checkout.step3"></h2>
+          <label class="text-xs font-semibold text-ink-500 mb-2 block" data-i18n="checkout.paymentMethod"></label>
+          <div class="grid sm:grid-cols-3 gap-3">
+            <label class="surface-card p-4 flex items-center gap-3 cursor-pointer"><input type="radio" name="payment" checked class="accent-gold-400 w-4 h-4" /><span class="text-sm font-semibold" data-i18n="checkout.paymentCard"></span></label>
+            <label class="surface-card p-4 flex items-center gap-3 cursor-pointer"><input type="radio" name="payment" class="accent-gold-400 w-4 h-4" /><span class="text-sm font-semibold" data-i18n="checkout.paymentKaspi"></span></label>
+            <label class="surface-card p-4 flex items-center gap-3 cursor-pointer"><input type="radio" name="payment" class="accent-gold-400 w-4 h-4" /><span class="text-sm font-semibold" data-i18n="checkout.paymentCash"></span></label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-full sm:w-auto" data-i18n="checkout.submit"></button>
+      </form>
+
+      <div class="surface-card p-6 lg:sticky" style="top: calc(var(--header-h) + 16px)">
+        <h2 class="font-display font-bold text-lg mb-5" data-i18n="checkout.orderSummary"></h2>
+        <div class="space-y-3 text-sm mb-5">
+          <div class="flex justify-between"><span class="text-ink-500" data-i18n="cart.summary.subtotal"></span><span class="font-semibold">15 000 ₸</span></div>
+          <div class="flex justify-between"><span class="text-ink-500" data-i18n="cart.summary.delivery"></span><span class="font-semibold text-leaf-600" data-i18n="cart.summary.deliveryFree"></span></div>
+          <div class="flex justify-between"><span class="text-ink-500" data-i18n="cart.summary.pointsEarn"></span><span class="font-semibold text-gold-600">+750 Points</span></div>
+        </div>
+        <div class="flex justify-between items-end pt-4 border-t border-line">
+          <span class="font-bold" data-i18n="cart.summary.total"></span>
+          <span class="font-display font-extrabold text-2xl">15 000 ₸</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script>
+  FIVEK.mountLayout("cart");
+</script>
+</body>
+</html>

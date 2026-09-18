@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="nav.promotions">Акции — 5K</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <section class="hero-navy grain-surface overflow-hidden">
+    <div class="container-5k py-16 md:py-20 text-center reveal">
+      <span class="badge badge-yellow mb-4" data-i18n="nav.promotions"></span>
+      <h1 class="font-display font-bold text-white text-3xl md:text-5xl mb-5 max-w-2xl mx-auto" data-i18n="promo.heroTitle"></h1>
+      <p class="text-white/60 max-w-lg mx-auto" data-i18n="promo.heroDesc"></p>
+    </div>
+  </section>
+
+  <!-- FLASH 5K -->
+  <section id="flash" class="section-elevated">
+    <div class="container-5k py-16 md:py-20">
+      <div class="flex items-center gap-3 mb-8 reveal">
+        <span class="w-11 h-11 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center">⚡</span>
+        <div><h2 class="font-display font-bold text-2xl" data-i18n="promo.flashTitle"></h2><p class="text-ink-500 text-sm" data-i18n="promo.flashDesc"></p></div>
+      </div>
+      <div class="hero-navy grain-surface rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 reveal">
+        <img src="https://placehold.co/400x400/0F1B2E/FFD400?text=TWS+Pro+5" alt="TWS Pro 5" class="w-full md:w-48 rounded-lg aspect-square object-cover" loading="lazy" />
+        <div class="flex-1 text-center md:text-left">
+          <h3 class="font-display font-bold text-white text-2xl mb-2" data-i18n="home.flash.product"></h3>
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <span class="font-display font-extrabold text-gold-400 text-3xl">5 000 ₸</span>
+            <span class="text-white/40 line-through text-lg">9 900 ₸</span>
+          </div>
+          <div class="flex items-center gap-2 justify-center md:justify-start" data-countdown data-hours="18">
+            <div class="countdown-box"><span class="num" data-cd-d>00</span><span class="unit" data-i18n="home.flash.days"></span></div>
+            <div class="countdown-box"><span class="num" data-cd-h>00</span><span class="unit" data-i18n="home.flash.hours"></span></div>
+            <div class="countdown-box"><span class="num" data-cd-m>00</span><span class="unit" data-i18n="home.flash.minutes"></span></div>
+            <div class="countdown-box"><span class="num" data-cd-s>00</span><span class="unit" data-i18n="home.flash.seconds"></span></div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary shrink-0" data-add-to-cart data-i18n="home.flash.cta"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECRET 5K -->
+  <section id="secret" class="section-paper border-y border-line">
+    <div class="container-5k py-16 md:py-20">
+      <div class="flex items-center gap-3 mb-8 reveal">
+        <span class="w-11 h-11 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center">🔒</span>
+        <div><h2 class="font-display font-bold text-2xl" data-i18n="promo.secretTitle"></h2><p class="text-ink-500 text-sm" data-i18n="promo.secretDesc"></p></div>
+      </div>
+      <div class="surface-card p-10 md:p-16 text-center reveal">
+        <div class="w-16 h-16 rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center mx-auto mb-6 text-2xl">🔒</div>
+        <p class="text-ink-500 text-sm mb-4" data-i18n="promo.secretLocked"></p>
+        <div class="flex items-center gap-2 justify-center" data-countdown data-hours="6">
+          <div class="countdown-box"><span class="num" data-cd-d>00</span><span class="unit" data-i18n="home.flash.days"></span></div>
+          <div class="countdown-box"><span class="num" data-cd-h>00</span><span class="unit" data-i18n="home.flash.hours"></span></div>
+          <div class="countdown-box"><span class="num" data-cd-m>00</span><span class="unit" data-i18n="home.flash.minutes"></span></div>
+          <div class="countdown-box"><span class="num" data-cd-s>00</span><span class="unit" data-i18n="home.flash.seconds"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIST OF PROMOTIONS -->
+  <section class="section-elevated">
+    <div class="container-5k py-16 md:py-20">
+      <h2 class="font-display font-bold text-3xl mb-10 reveal" data-i18n="promo.listTitle"></h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="hero-navy grain-surface rounded-xl p-6 reveal">
+          <span class="badge badge-yellow mb-4" data-i18n="home.promo.card1.tag"></span>
+          <h3 class="font-display font-bold text-white text-xl mb-2" data-i18n="home.promo.card1.title"></h3>
+          <p class="text-white/55 text-sm" data-i18n="home.promo.card1.desc"></p>
+        </div>
+        <div class="bg-leaf-600 rounded-xl p-6 reveal" style="transition-delay:.05s">
+          <span class="badge badge-yellow mb-4" data-i18n="home.promo.card2.tag"></span>
+          <h3 class="font-display font-bold text-white text-xl mb-2" data-i18n="home.promo.card2.title"></h3>
+          <p class="text-white/70 text-sm" data-i18n="home.promo.card2.desc"></p>
+        </div>
+        <div class="bg-navy-800 rounded-xl p-6 reveal" style="transition-delay:.1s">
+          <span class="badge badge-yellow mb-4" data-i18n="home.promo.card3.tag"></span>
+          <h3 class="font-display font-bold text-white text-xl mb-2" data-i18n="home.promo.card3.title"></h3>
+          <p class="text-white/55 text-sm" data-i18n="home.promo.card3.desc"></p>
+        </div>
+      </div>
+      <p class="text-ink-400 text-xs mt-10 max-w-2xl reveal" data-i18n="promo.legalNote"></p>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script>FIVEK.mountLayout("promotions");</script>
+</body>
+</html>

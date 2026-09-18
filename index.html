@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="meta.title">5K — Покупай. Играй. Получай больше.</title>
+<meta name="description" content="5K — маркетплейс Казахстана с бонусами Points, игровыми заданиями и реферальной программой." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div id="app-header"></div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero-navy grain-surface overflow-hidden">
+    <div class="container-5k relative z-10 pt-12 pb-20 md:pt-16 md:pb-28">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <span class="badge badge-yellow mb-6" data-i18n="home.hero.eyebrow"></span>
+          <h1 class="font-display font-extrabold text-white text-[2.5rem] leading-[1.06] sm:text-5xl md:text-6xl mb-5" data-i18n="home.hero.title"></h1>
+          <p class="text-white/65 text-base md:text-lg max-w-md mb-8 leading-relaxed" data-i18n="home.hero.subtitle"></p>
+          <div class="flex flex-wrap gap-3 mb-10">
+            <a href="catalog.html" class="btn btn-primary" data-i18n="common.goToCatalog"></a>
+            <a href="#how" class="btn btn-outline" data-i18n="common.howItWorks"></a>
+          </div>
+          <div class="flex flex-wrap gap-8">
+            <div><div class="font-display font-bold text-gold-400 text-2xl" data-i18n="home.hero.stat1.num"></div><div class="text-white/50 text-xs mt-1" data-i18n="home.hero.stat1.label"></div></div>
+            <div><div class="font-display font-bold text-gold-400 text-2xl" data-i18n="home.hero.stat2.num"></div><div class="text-white/50 text-xs mt-1" data-i18n="home.hero.stat2.label"></div></div>
+            <div><div class="font-display font-bold text-gold-400 text-2xl" data-i18n="home.hero.stat3.num"></div><div class="text-white/50 text-xs mt-1" data-i18n="home.hero.stat3.label"></div></div>
+          </div>
+        </div>
+
+        <div class="relative reveal" style="transition-delay:.1s">
+          <div class="relative rounded-xl overflow-hidden border border-white/10 shadow-elevated">
+            <img src="assets/img/photo/f7f0679a9691a02e7527c94eb3a6891f.jpg" alt="5K — технологичный шопинг" class="w-full h-[320px] sm:h-[400px] md:h-[460px] object-cover mix-blend-luminosity opacity-90" loading="eager" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/10 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-gold-400/10 via-transparent to-leaf-500/20 mix-blend-color"></div>
+          </div>
+          <div class="absolute -left-4 bottom-8 md:-left-8 md:bottom-12 surface-card px-4 py-3 flex items-center gap-3 max-w-[210px]">
+            <span class="w-10 h-10 rounded-xl bg-gold-400/15 text-gold-500 flex items-center justify-center shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </span>
+            <div>
+              <div class="font-display font-bold text-sm text-ink-900" data-i18n="home.points.balanceLabel"></div>
+              <div class="text-gold-600 font-extrabold text-sm">1 250 <span data-i18n="common.points"></span></div>
+            </div>
+          </div>
+          <div class="absolute -right-3 -top-4 md:-right-6 md:-top-6 bg-leaf-500 text-white rounded-2xl px-4 py-2.5 shadow-glow-green flex items-center gap-2 text-sm font-bold">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="common.hotBadge"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFIT STRIP -->
+  <section class="bg-white border-b border-line">
+    <div class="container-5k py-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div class="flex items-center gap-3 reveal">
+          <span class="w-12 h-12 rounded-2xl bg-paper-100 text-navy-800 flex items-center justify-center shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="15" height="10" rx="2"/><path d="M16 10h3.5L22 13.5V17h-6"/><circle cx="6" cy="19.5" r="1.7"/><circle cx="18" cy="19.5" r="1.7"/></svg></span>
+          <div><div class="font-bold text-sm" data-i18n="home.benefits.delivery.title"></div><div class="text-ink-600 text-xs" data-i18n="home.benefits.delivery.desc"></div></div>
+        </div>
+        <div class="flex items-center gap-3 reveal" style="transition-delay:.05s">
+          <span class="w-12 h-12 rounded-2xl bg-paper-100 text-navy-800 flex items-center justify-center shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <div><div class="font-bold text-sm" data-i18n="home.benefits.quality.title"></div><div class="text-ink-600 text-xs" data-i18n="home.benefits.quality.desc"></div></div>
+        </div>
+        <div class="flex items-center gap-3 reveal" style="transition-delay:.1s">
+          <span class="w-12 h-12 rounded-2xl bg-paper-100 text-navy-800 flex items-center justify-center shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2.5"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span>
+          <div><div class="font-bold text-sm" data-i18n="home.benefits.payment.title"></div><div class="text-ink-600 text-xs" data-i18n="home.benefits.payment.desc"></div></div>
+        </div>
+        <div class="flex items-center gap-3 reveal" style="transition-delay:.15s">
+          <span class="w-12 h-12 rounded-2xl bg-paper-100 text-navy-800 flex items-center justify-center shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a2 2 0 0 0-2-2 2 2 0 0 0-2 2v4H4l1 11h14l1-11h-6Z"/></svg></span>
+          <div><div class="font-bold text-sm" data-i18n="home.benefits.support.title"></div><div class="text-ink-600 text-xs" data-i18n="home.benefits.support.desc"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLASH 5K -->
+  <section id="flash" class="hero-navy grain-surface overflow-hidden">
+    <div class="container-5k py-16 md:py-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 reveal">
+        <div>
+          <span class="badge badge-yellow mb-3" data-i18n="home.flash.eyebrow"></span>
+          <h2 class="font-display font-bold text-white text-3xl md:text-4xl mb-2" data-i18n="home.flash.title"></h2>
+          <p class="text-white/55 max-w-md" data-i18n="home.flash.subtitle"></p>
+        </div>
+        <div class="flex items-center gap-2" data-countdown data-hours="18">
+          <div class="countdown-box"><span class="num" data-cd-d>00</span><span class="unit" data-i18n="home.flash.days"></span></div>
+          <div class="countdown-box"><span class="num" data-cd-h>00</span><span class="unit" data-i18n="home.flash.hours"></span></div>
+          <div class="countdown-box"><span class="num" data-cd-m>00</span><span class="unit" data-i18n="home.flash.minutes"></span></div>
+          <div class="countdown-box"><span class="num" data-cd-s>00</span><span class="unit" data-i18n="home.flash.seconds"></span></div>
+        </div>
+      </div>
+
+      <div class="bg-white/[0.05] border border-white/10 rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 reveal">
+        <div class="w-full md:w-56 shrink-0">
+          <img src="https://placehold.co/500x500/0F1B2E/FFD400?text=TWS+Pro+5" alt="TWS Pro 5" class="rounded-lg w-full aspect-square object-cover" loading="lazy" />
+        </div>
+        <div class="flex-1 text-center md:text-left">
+          <span class="badge badge-yellow mb-3" data-i18n="common.hotBadge"></span>
+          <h3 class="font-display font-bold text-white text-2xl mb-2" data-i18n="home.flash.product"></h3>
+          <div class="flex items-center justify-center md:justify-start gap-1 mb-3">
+            <span class="stars">★★★★★</span><span class="text-white/50 text-sm">4.8 · 245 <span data-i18n="common.reviewsCount"></span></span>
+          </div>
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <span class="font-display font-extrabold text-gold-400 text-3xl">5 000 ₸</span>
+            <span class="text-white/40 line-through text-lg">9 900 ₸</span>
+          </div>
+          <p class="text-white/50 text-sm mb-1"><span data-i18n="home.flash.stockLabel"></span>: <strong class="text-white">17</strong> <span data-i18n="home.flash.stockUnit"></span></p>
+          <div class="h-1.5 w-full max-w-xs mx-auto md:mx-0 bg-white/10 rounded-full overflow-hidden mb-5"><div class="h-full w-[34%] bg-gradient-to-r from-gold-400 to-gold-500 rounded-full"></div></div>
+        </div>
+        <div class="shrink-0">
+          <button type="button" class="btn btn-primary w-full md:w-auto" data-add-to-cart data-i18n="home.flash.cta"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section-elevated">
+    <div class="container-5k py-16 md:py-20">
+      <div class="mb-10 reveal">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-2" data-i18n="home.categories.title"></h2>
+        <p class="text-ink-600" data-i18n="home.categories.subtitle"></p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5">
+        <!-- category card template repeated -->
+        <a href="catalog.html#electronics" class="surface-card p-5 flex flex-col items-center text-center gap-3 reveal">
+          <span class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="3"/><line x1="10" y1="19" x2="14" y2="19"/></svg></span>
+          <span class="font-semibold text-sm" data-i18n="home.categories.electronics"></span>
+        </a>
+        <a href="catalog.html#home" class="surface-card p-5 flex flex-col items-center text-center gap-3 reveal" style="transition-delay:.03s">
+          <span class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/></svg></span>
+          <span class="font-semibold text-sm" data-i18n="home.categories.home"></span>
+        </a>
+        <a href="catalog.html#auto" class="surface-card p-5 flex flex-col items-center text-center gap-3 reveal" style="transition-delay:.06s">
+          <span class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-6h14l2 6"/><rect x="2" y="13" width="20" height="6" rx="2"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg></span>
+          <span class="font-semibold text-sm" data-i18n="home.categories.auto"></span>
+        </a>
+        <a href="catalog.html#beauty" class="surface-card p-5 flex flex-col items-center text-center gap-3 reveal" style="transition-delay:.09s">
+          <span class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.2 5.6L20 9l-4.4 3.6L17 19l-5-3.2L7 19l1.4-6.4L4 9l5.8-1.4Z"/></svg></span>
+          <span class="font-semibold text-sm" data-i18n="home.categories.beauty"></span>
+        </a>
+        <a href="catalog.html#sport" class="surface-card p-5 flex flex-col items-center text-center gap-3 reveal">
+          <span class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 3 3m14.5 3.5L21 3M6.5 17.5 3 21m14.5-3.5L21 21"/><rect x="7" y="7" width="10" height="10" rx="3"/></svg></span>
+          <span class="font-semibold text-sm" data-i18n="home.categories.sport"></span>
+        </a>
+        <a href="catalog.html#games" class="surface-card p-5 flex flex-col items-center text-center gap-3 reveal" style="transition-delay:.03s">
+          <span class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="5"/><line x1="7" y1="12" x2="11" y2="12"/><line x1="9" y1="10" x2="9" y2="14"/><circle cx="16" cy="10.5" r="1"/><circle cx="18" cy="13" r="1"/></svg></span>
+          <span class="font-semibold text-sm" data-i18n="home.categories.games"></span>
+        </a>
+        <a href="catalog.html#gifts" class="surface-card p-5 flex flex-col items-center text-center gap-3 reveal" style="transition-delay:.06s">
+          <span class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M3 9h18v4H3z"/><line x1="12" y1="9" x2="12" y2="21"/><path d="M12 9C9 9 8 4 12 4s3 5 0 5Zm0 0c3 0 4-5 0-5s-3 5 0 5Z"/></svg></span>
+          <span class="font-semibold text-sm" data-i18n="home.categories.gifts"></span>
+        </a>
+        <a href="catalog.html#accessories" class="surface-card p-5 flex flex-col items-center text-center gap-3 reveal" style="transition-delay:.09s">
+          <span class="w-14 h-14 rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7V5a3 3 0 0 1 6 0v2"/><rect x="3" y="7" width="12" height="13" rx="2"/><path d="M17 10h4v9h-4z"/></svg></span>
+          <span class="font-semibold text-sm" data-i18n="home.categories.accessories"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR PRODUCTS -->
+  <section class="section-paper">
+    <div class="container-5k py-16 md:py-20">
+      <div class="flex items-end justify-between gap-4 mb-10 reveal">
+        <div><h2 class="font-display font-bold text-3xl md:text-4xl mb-2" data-i18n="home.popular.title"></h2><p class="text-ink-600" data-i18n="home.popular.subtitle"></p></div>
+        <a href="catalog.html" class="hidden sm:inline-flex btn btn-ghost-light" data-i18n="common.seeAll"></a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="popular-grid"></div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="section-elevated border-y border-line">
+    <div class="container-5k py-16 md:py-20">
+      <div class="flex items-end justify-between gap-4 mb-10 reveal">
+        <div><h2 class="font-display font-bold text-3xl md:text-4xl mb-2" data-i18n="home.new.title"></h2><p class="text-ink-600" data-i18n="home.new.subtitle"></p></div>
+        <a href="catalog.html" class="hidden sm:inline-flex btn btn-ghost-light" data-i18n="common.seeAll"></a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="new-grid"></div>
+    </div>
+  </section>
+
+  <!-- 5K POINTS -->
+  <section class="section-paper">
+    <div class="container-5k py-16 md:py-20 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="badge badge-navy mb-4" data-i18n="home.points.eyebrow"></span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4" data-i18n="home.points.title"></h2>
+        <p class="text-ink-600 mb-8 max-w-md" data-i18n="home.points.desc"></p>
+        <div class="space-y-5 mb-8">
+          <div class="flex gap-4"><span class="w-10 h-10 rounded-xl bg-gold-400/15 text-gold-600 flex items-center justify-center shrink-0 font-display font-bold">1</span><div><div class="font-bold text-sm" data-i18n="home.points.f1.title"></div><div class="text-ink-600 text-sm" data-i18n="home.points.f1.desc"></div></div></div>
+          <div class="flex gap-4"><span class="w-10 h-10 rounded-xl bg-gold-400/15 text-gold-600 flex items-center justify-center shrink-0 font-display font-bold">2</span><div><div class="font-bold text-sm" data-i18n="home.points.f2.title"></div><div class="text-ink-600 text-sm" data-i18n="home.points.f2.desc"></div></div></div>
+          <div class="flex gap-4"><span class="w-10 h-10 rounded-xl bg-gold-400/15 text-gold-600 flex items-center justify-center shrink-0 font-display font-bold">3</span><div><div class="font-bold text-sm" data-i18n="home.points.f3.title"></div><div class="text-ink-600 text-sm" data-i18n="home.points.f3.desc"></div></div></div>
+        </div>
+        <a href="points.html" class="btn btn-dark" data-i18n="home.points.cta"></a>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <div class="hero-navy grain-surface rounded-xl p-8 relative overflow-hidden shadow-elevated">
+          <div class="relative z-10">
+            <div class="flex items-center justify-between mb-8">
+              <span class="text-white/60 text-sm font-semibold" data-i18n="home.points.balanceLabel"></span>
+              <span class="badge badge-yellow" data-i18n="common.hotBadge"></span>
+            </div>
+            <div class="font-display font-extrabold text-gold-400 text-5xl mb-1">1 250</div>
+            <div class="text-white/50 text-sm mb-8"><span data-i18n="common.points"></span> ≈ 1 250 ₸</div>
+            <div class="grid grid-cols-3 gap-3">
+              <div class="bg-white/[0.06] border border-white/10 rounded-xl p-3 text-center"><div class="text-white font-bold text-sm">+120</div><div class="text-white/40 text-[10px] mt-0.5" data-i18n="home.points.tx1"></div></div>
+              <div class="bg-white/[0.06] border border-white/10 rounded-xl p-3 text-center"><div class="text-white font-bold text-sm">+40</div><div class="text-white/40 text-[10px] mt-0.5" data-i18n="home.points.tx2"></div></div>
+              <div class="bg-white/[0.06] border border-white/10 rounded-xl p-3 text-center"><div class="text-white font-bold text-sm">+250</div><div class="text-white/40 text-[10px] mt-0.5" data-i18n="home.points.tx3"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5K GAME -->
+  <section class="hero-navy grain-surface overflow-hidden">
+    <div class="container-5k py-16 md:py-20">
+      <div class="max-w-xl mb-12 reveal">
+        <span class="badge badge-yellow mb-4" data-i18n="home.game.eyebrow"></span>
+        <h2 class="font-display font-bold text-white text-3xl md:text-4xl mb-4" data-i18n="home.game.title"></h2>
+        <p class="text-white/60" data-i18n="home.game.desc"></p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        <div class="bg-white/[0.05] border border-white/10 rounded-xl p-6 reveal hover:border-gold-400/50 transition-colors duration-300">
+          <span class="w-11 h-11 rounded-xl bg-gold-400/15 text-gold-400 flex items-center justify-center mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+          <div class="font-bold text-white text-sm mb-1" data-i18n="home.game.task1.title"></div>
+          <div class="text-white/50 text-xs mb-4" data-i18n="home.game.task1.desc"></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="h-full w-3/4 bg-gold-400 rounded-full"></div></div>
+        </div>
+        <div class="bg-white/[0.05] border border-white/10 rounded-xl p-6 reveal hover:border-gold-400/50 transition-colors duration-300" style="transition-delay:.05s">
+          <span class="w-11 h-11 rounded-xl bg-leaf-500/15 text-leaf-400 flex items-center justify-center mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1.4"/><circle cx="18" cy="21" r="1.4"/><path d="M1 1h3l2.7 13.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L21 6H5.2"/></svg></span>
+          <div class="font-bold text-white text-sm mb-1" data-i18n="home.game.task2.title"></div>
+          <div class="text-white/50 text-xs mb-4" data-i18n="home.game.task2.desc"></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="h-full w-2/5 bg-leaf-400 rounded-full"></div></div>
+        </div>
+        <div class="bg-white/[0.05] border border-white/10 rounded-xl p-6 reveal hover:border-gold-400/50 transition-colors duration-300" style="transition-delay:.1s">
+          <span class="w-11 h-11 rounded-xl bg-gold-400/15 text-gold-400 flex items-center justify-center mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.2 5.6L20 9l-4.4 3.6L17 19l-5-3.2L7 19l1.4-6.4L4 9l5.8-1.4Z"/></svg></span>
+          <div class="font-bold text-white text-sm mb-1" data-i18n="home.game.task3.title"></div>
+          <div class="text-white/50 text-xs mb-4" data-i18n="home.game.task3.desc"></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="h-full w-1/4 bg-gold-400 rounded-full"></div></div>
+        </div>
+        <div class="bg-white/[0.05] border border-white/10 rounded-xl p-6 reveal hover:border-gold-400/50 transition-colors duration-300" style="transition-delay:.15s">
+          <span class="w-11 h-11 rounded-xl bg-leaf-500/15 text-leaf-400 flex items-center justify-center mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <div class="font-bold text-white text-sm mb-1" data-i18n="home.game.task4.title"></div>
+          <div class="text-white/50 text-xs mb-4" data-i18n="home.game.task4.desc"></div>
+          <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="h-full w-1/12 bg-leaf-400 rounded-full"></div></div>
+        </div>
+      </div>
+      <a href="game.html" class="btn btn-primary reveal" data-i18n="home.game.cta"></a>
+    </div>
+  </section>
+
+  <!-- 5K EARN -->
+  <section class="section-elevated overflow-hidden">
+    <div class="container-5k py-16 md:py-20 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="relative rounded-xl overflow-hidden order-2 lg:order-1 reveal">
+        <img src="assets/img/photo/e5636ef5e7d492704d5e25b5e2d6dcf3.jpg" alt="5K Earn — реферальная программа" class="w-full h-[300px] md:h-[380px] object-cover" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/10 to-transparent"></div>
+        <div class="absolute inset-0 bg-gold-400/10 mix-blend-multiply"></div>
+        <div class="absolute bottom-5 left-5 right-5 surface-card px-4 py-3 flex items-center justify-between text-sm">
+          <span class="font-mono font-bold text-ink-900">5k.kz/r/AZAMAT21</span>
+          <span class="badge badge-green">+250 <span data-i18n="common.points"></span></span>
+        </div>
+      </div>
+      <div class="order-1 lg:order-2 reveal" style="transition-delay:.1s">
+        <span class="badge badge-navy mb-4" data-i18n="home.earn.eyebrow"></span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-4" data-i18n="home.earn.title"></h2>
+        <p class="text-ink-600 mb-8 max-w-md" data-i18n="home.earn.desc"></p>
+        <div class="grid grid-cols-4 gap-3 mb-8">
+          <div class="text-center"><div class="font-display font-bold text-xl text-navy-900">340</div><div class="text-ink-600 text-[11px]" data-i18n="home.earn.stat1"></div></div>
+          <div class="text-center"><div class="font-display font-bold text-xl text-navy-900">58</div><div class="text-ink-600 text-[11px]" data-i18n="home.earn.stat2"></div></div>
+          <div class="text-center"><div class="font-display font-bold text-xl text-navy-900">21</div><div class="text-ink-600 text-[11px]" data-i18n="home.earn.stat3"></div></div>
+          <div class="text-center"><div class="font-display font-bold text-xl text-leaf-600">42 000 ₸</div><div class="text-ink-600 text-[11px]" data-i18n="home.earn.stat4"></div></div>
+        </div>
+        <a href="earn.html" class="btn btn-primary" data-i18n="home.earn.cta"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOTIONS -->
+  <section class="section-paper">
+    <div class="container-5k py-16 md:py-20">
+      <div class="mb-10 reveal"><h2 class="font-display font-bold text-3xl md:text-4xl mb-2" data-i18n="home.promo.title"></h2><p class="text-ink-600" data-i18n="home.promo.subtitle"></p></div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="hero-navy grain-surface rounded-xl p-6 relative overflow-hidden reveal">
+          <span class="badge badge-yellow mb-4" data-i18n="home.promo.card1.tag"></span>
+          <h3 class="font-display font-bold text-white text-xl mb-2" data-i18n="home.promo.card1.title"></h3>
+          <p class="text-white/55 text-sm mb-6" data-i18n="home.promo.card1.desc"></p>
+          <a href="promotions.html#secret" class="btn btn-outline btn-sm text-sm" data-i18n="common.participate"></a>
+        </div>
+        <div class="bg-leaf-600 rounded-xl p-6 relative overflow-hidden reveal" style="transition-delay:.05s">
+          <span class="badge badge-yellow mb-4" data-i18n="home.promo.card2.tag"></span>
+          <h3 class="font-display font-bold text-white text-xl mb-2" data-i18n="home.promo.card2.title"></h3>
+          <p class="text-white/70 text-sm mb-6" data-i18n="home.promo.card2.desc"></p>
+          <a href="promotions.html" class="btn btn-primary btn-sm text-sm" data-i18n="common.more"></a>
+        </div>
+        <div class="bg-navy-800 rounded-xl p-6 relative overflow-hidden reveal" style="transition-delay:.1s">
+          <span class="badge badge-yellow mb-4" data-i18n="home.promo.card3.tag"></span>
+          <h3 class="font-display font-bold text-white text-xl mb-2" data-i18n="home.promo.card3.title"></h3>
+          <p class="text-white/55 text-sm mb-6" data-i18n="home.promo.card3.desc"></p>
+          <a href="earn.html" class="btn btn-outline btn-sm text-sm" data-i18n="common.more"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY 5K -->
+  <section class="section-elevated border-y border-line">
+    <div class="container-5k py-16 md:py-20">
+      <div class="text-center max-w-xl mx-auto mb-12 reveal">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-2" data-i18n="home.why.title"></h2>
+        <p class="text-ink-600" data-i18n="home.why.subtitle"></p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <div class="text-center reveal"><span class="w-14 h-14 mx-auto rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1.4"/><circle cx="18" cy="21" r="1.4"/><path d="M1 1h3l2.7 13.4a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L21 6H5.2"/></svg></span><div class="font-bold text-sm mb-1" data-i18n="home.why.c1.title"></div><div class="text-ink-600 text-xs" data-i18n="home.why.c1.desc"></div></div>
+        <div class="text-center reveal" style="transition-delay:.04s"><span class="w-14 h-14 mx-auto rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><div class="font-bold text-sm mb-1" data-i18n="home.why.c2.title"></div><div class="text-ink-600 text-xs" data-i18n="home.why.c2.desc"></div></div>
+        <div class="text-center reveal" style="transition-delay:.08s"><span class="w-14 h-14 mx-auto rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="5"/><line x1="7" y1="12" x2="11" y2="12"/><line x1="9" y1="10" x2="9" y2="14"/><circle cx="16" cy="10.5" r="1"/><circle cx="18" cy="13" r="1"/></svg></span><div class="font-bold text-sm mb-1" data-i18n="home.why.c3.title"></div><div class="text-ink-600 text-xs" data-i18n="home.why.c3.desc"></div></div>
+        <div class="text-center reveal" style="transition-delay:.12s"><span class="w-14 h-14 mx-auto rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div class="font-bold text-sm mb-1" data-i18n="home.why.c4.title"></div><div class="text-ink-600 text-xs" data-i18n="home.why.c4.desc"></div></div>
+        <div class="text-center reveal" style="transition-delay:.16s"><span class="w-14 h-14 mx-auto rounded-2xl bg-navy-900 text-gold-400 flex items-center justify-center mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></span><div class="font-bold text-sm mb-1" data-i18n="home.why.c5.title"></div><div class="text-ink-600 text-xs" data-i18n="home.why.c5.desc"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section-paper">
+    <div class="container-5k py-16 md:py-20">
+      <div class="text-center max-w-xl mx-auto mb-12 reveal">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-2" data-i18n="home.how.title"></h2>
+        <p class="text-ink-600" data-i18n="home.how.subtitle"></p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        <div class="surface-card p-6 reveal"><div class="font-display font-extrabold text-gold-500 text-3xl mb-3">01</div><div class="font-bold mb-1" data-i18n="home.how.step1.title"></div><div class="text-ink-600 text-sm" data-i18n="home.how.step1.desc"></div></div>
+        <div class="surface-card p-6 reveal" style="transition-delay:.06s"><div class="font-display font-extrabold text-gold-500 text-3xl mb-3">02</div><div class="font-bold mb-1" data-i18n="home.how.step2.title"></div><div class="text-ink-600 text-sm" data-i18n="home.how.step2.desc"></div></div>
+        <div class="surface-card p-6 reveal" style="transition-delay:.12s"><div class="font-display font-extrabold text-gold-500 text-3xl mb-3">03</div><div class="font-bold mb-1" data-i18n="home.how.step3.title"></div><div class="text-ink-600 text-sm" data-i18n="home.how.step3.desc"></div></div>
+        <div class="surface-card p-6 reveal" style="transition-delay:.18s"><div class="font-display font-extrabold text-gold-500 text-3xl mb-3">04</div><div class="font-bold mb-1" data-i18n="home.how.step4.title"></div><div class="text-ink-600 text-sm" data-i18n="home.how.step4.desc"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="section-elevated border-y border-line overflow-hidden">
+    <div class="container-5k py-16 md:py-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 reveal">
+        <div>
+          <span class="badge badge-outline mb-3" data-i18n="home.reviews.eyebrow"></span>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-2" data-i18n="home.reviews.title"></h2>
+          <p class="text-ink-600 max-w-md" data-i18n="home.reviews.subtitle"></p>
+        </div>
+        <div class="reviews-tabs" data-reviews-tabs>
+          <button type="button" class="reviews-tab active" data-reviews-tab="video">▶ <span data-i18n="home.reviews.tab.video"></span></button>
+          <button type="button" class="reviews-tab" data-reviews-tab="text">✎ <span data-i18n="home.reviews.tab.text"></span></button>
+          <button type="button" class="reviews-tab" data-reviews-tab="audio">🎙 <span data-i18n="home.reviews.tab.audio"></span></button>
+          <button type="button" class="reviews-tab" data-reviews-tab="gis">📍 <span data-i18n="home.reviews.tab.gis"></span></button>
+        </div>
+      </div>
+
+      <!-- VIDEO PANEL -->
+      <div data-reviews-panel="video" class="">
+        <div class="flex items-center gap-3 mb-4">
+          <button type="button" class="carousel-arrow" data-carousel-prev aria-label="prev">‹</button>
+          <button type="button" class="carousel-arrow" data-carousel-next aria-label="next">›</button>
+          <span class="text-ink-400 text-xs ml-1" data-i18n="home.reviews.swipeHint"></span>
+        </div>
+        <div class="review-track-wrap" data-carousel>
+          <div class="review-track" data-carousel-track>
+            <div class="review-card surface-card overflow-hidden">
+              <div class="relative aspect-[4/5] bg-navy-900"><img src="https://placehold.co/480x600/0F1B2E/FFD400?text=Video+1" class="w-full h-full object-cover opacity-80" loading="lazy" alt="Видеоотзыв 1" /><span class="absolute inset-0 flex items-center justify-center"><span class="w-14 h-14 rounded-full bg-gold-400 text-navy-900 flex items-center justify-center">▶</span></span></div>
+              <div class="p-4"><div class="font-bold text-sm">Айгерим К.</div><div class="stars text-xs">★★★★★</div></div>
+            </div>
+            <div class="review-card surface-card overflow-hidden">
+              <div class="relative aspect-[4/5] bg-navy-900"><img src="https://placehold.co/480x600/0F1B2E/FFD400?text=Video+2" class="w-full h-full object-cover opacity-80" loading="lazy" alt="Видеоотзыв 2" /><span class="absolute inset-0 flex items-center justify-center"><span class="w-14 h-14 rounded-full bg-gold-400 text-navy-900 flex items-center justify-center">▶</span></span></div>
+              <div class="p-4"><div class="font-bold text-sm">Данияр С.</div><div class="stars text-xs">★★★★★</div></div>
+            </div>
+            <div class="review-card surface-card overflow-hidden">
+              <div class="relative aspect-[4/5] bg-navy-900"><img src="https://placehold.co/480x600/0F1B2E/FFD400?text=Video+3" class="w-full h-full object-cover opacity-80" loading="lazy" alt="Видеоотзыв 3" /><span class="absolute inset-0 flex items-center justify-center"><span class="w-14 h-14 rounded-full bg-gold-400 text-navy-900 flex items-center justify-center">▶</span></span></div>
+              <div class="p-4"><div class="font-bold text-sm">Мадина Т.</div><div class="stars text-xs">★★★★★</div></div>
+            </div>
+            <div class="review-card surface-card overflow-hidden">
+              <div class="relative aspect-[4/5] bg-navy-900"><img src="https://placehold.co/480x600/0F1B2E/FFD400?text=Video+4" class="w-full h-full object-cover opacity-80" loading="lazy" alt="Видеоотзыв 4" /><span class="absolute inset-0 flex items-center justify-center"><span class="w-14 h-14 rounded-full bg-gold-400 text-navy-900 flex items-center justify-center">▶</span></span></div>
+              <div class="p-4"><div class="font-bold text-sm">Ерлан Б.</div><div class="stars text-xs">★★★★★</div></div>
+            </div>
+            <div class="review-card surface-card overflow-hidden">
+              <div class="relative aspect-[4/5] bg-navy-900"><img src="https://placehold.co/480x600/0F1B2E/FFD400?text=Video+5" class="w-full h-full object-cover opacity-80" loading="lazy" alt="Видеоотзыв 5" /><span class="absolute inset-0 flex items-center justify-center"><span class="w-14 h-14 rounded-full bg-gold-400 text-navy-900 flex items-center justify-center">▶</span></span></div>
+              <div class="p-4"><div class="font-bold text-sm">Асель Н.</div><div class="stars text-xs">★★★★★</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEXT PANEL -->
+      <div data-reviews-panel="text" class="hidden">
+        <div class="flex items-center gap-3 mb-4">
+          <button type="button" class="carousel-arrow" data-carousel-prev aria-label="prev">‹</button>
+          <button type="button" class="carousel-arrow" data-carousel-next aria-label="next">›</button>
+          <span class="text-ink-400 text-xs ml-1" data-i18n="home.reviews.swipeHint"></span>
+        </div>
+        <div class="review-track-wrap" data-carousel>
+          <div class="review-track" data-carousel-track>
+            <div class="review-card surface-card p-5">
+              <div class="stars text-sm mb-2">★★★★★</div>
+              <p class="text-sm text-ink-700 mb-4 clamp-2" data-i18n="reviewsText.r1"></p>
+              <div class="font-bold text-sm">Айгерим К.</div>
+              <div class="text-ink-400 text-xs" data-i18n="reviewsCity.almaty"></div>
+            </div>
+            <div class="review-card surface-card p-5">
+              <div class="stars text-sm mb-2">★★★★★</div>
+              <p class="text-sm text-ink-700 mb-4 clamp-2" data-i18n="reviewsText.r2"></p>
+              <div class="font-bold text-sm">Данияр С.</div>
+              <div class="text-ink-400 text-xs" data-i18n="reviewsCity.astana"></div>
+            </div>
+            <div class="review-card surface-card p-5">
+              <div class="stars text-sm mb-2">★★★★★</div>
+              <p class="text-sm text-ink-700 mb-4 clamp-2" data-i18n="reviewsText.r3"></p>
+              <div class="font-bold text-sm">Мадина Т.</div>
+              <div class="text-ink-400 text-xs" data-i18n="reviewsCity.shymkent"></div>
+            </div>
+            <div class="review-card surface-card p-5">
+              <div class="stars text-sm mb-2">★★★★★</div>
+              <p class="text-sm text-ink-700 mb-4 clamp-2" data-i18n="reviewsText.r4"></p>
+              <div class="font-bold text-sm">Ерлан Б.</div>
+              <div class="text-ink-400 text-xs" data-i18n="reviewsCity.karaganda"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUDIO PANEL -->
+      <div data-reviews-panel="audio" class="hidden">
+        <div class="flex items-center gap-3 mb-4">
+          <button type="button" class="carousel-arrow" data-carousel-prev aria-label="prev">‹</button>
+          <button type="button" class="carousel-arrow" data-carousel-next aria-label="next">›</button>
+          <span class="text-ink-400 text-xs ml-1" data-i18n="home.reviews.swipeHint"></span>
+        </div>
+        <div class="review-track-wrap" data-carousel>
+          <div class="review-track" data-carousel-track>
+            <div class="review-card surface-card p-5">
+              <div class="flex items-center gap-3 mb-4"><span class="w-11 h-11 rounded-full bg-navy-900 text-gold-400 flex items-center justify-center">🎙</span><div><div class="font-bold text-sm">Асель Н.</div><div class="stars text-xs">★★★★★</div></div></div>
+              <div class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-gold-400 text-navy-900 flex items-center justify-center shrink-0">▶</span><div class="flex-1 h-1.5 bg-paper-100 rounded-full overflow-hidden"><div class="h-full w-1/3 bg-gold-400 rounded-full"></div></div><span class="text-ink-400 text-xs">0:42</span></div>
+            </div>
+            <div class="review-card surface-card p-5">
+              <div class="flex items-center gap-3 mb-4"><span class="w-11 h-11 rounded-full bg-navy-900 text-gold-400 flex items-center justify-center">🎙</span><div><div class="font-bold text-sm">Бекзат О.</div><div class="stars text-xs">★★★★★</div></div></div>
+              <div class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-gold-400 text-navy-900 flex items-center justify-center shrink-0">▶</span><div class="flex-1 h-1.5 bg-paper-100 rounded-full overflow-hidden"><div class="h-full w-1/2 bg-gold-400 rounded-full"></div></div><span class="text-ink-400 text-xs">1:05</span></div>
+            </div>
+            <div class="review-card surface-card p-5">
+              <div class="flex items-center gap-3 mb-4"><span class="w-11 h-11 rounded-full bg-navy-900 text-gold-400 flex items-center justify-center">🎙</span><div><div class="font-bold text-sm">Дана Е.</div><div class="stars text-xs">★★★★★</div></div></div>
+              <div class="flex items-center gap-2"><span class="w-9 h-9 rounded-full bg-gold-400 text-navy-900 flex items-center justify-center shrink-0">▶</span><div class="flex-1 h-1.5 bg-paper-100 rounded-full overflow-hidden"><div class="h-full w-1/5 bg-gold-400 rounded-full"></div></div><span class="text-ink-400 text-xs">0:28</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2GIS PANEL -->
+      <div data-reviews-panel="gis" class="hidden">
+        <div class="surface-card p-6 md:p-10 flex flex-col md:flex-row items-center gap-8">
+          <div class="flex-1 text-center md:text-left">
+            <h3 class="font-display font-bold text-2xl mb-2" data-i18n="home.reviews.gis.title"></h3>
+            <p class="text-ink-600 mb-6 max-w-sm" data-i18n="home.reviews.gis.desc"></p>
+            <a href="https://2gis.kz/almaty/search/5K" target="_blank" rel="noopener" class="gis-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="white" fill-opacity=".18"/><path d="M12 6a6 6 0 0 0-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 0 0-6-6Zm0 8.2A2.2 2.2 0 1 1 12 9.8a2.2 2.2 0 0 1 0 4.4Z" fill="white"/></svg>
+              <span data-i18n="home.reviews.gis.cta"></span>
+            </a>
+          </div>
+          <div class="w-full md:w-72 h-48 rounded-xl overflow-hidden border border-line shrink-0">
+            <img src="https://placehold.co/480x320/EEF0F3/5B6472?text=2GIS+Map" alt="2GIS карта офиса 5K" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-paper">
+    <div class="container-5k py-16 md:py-20">
+      <div class="text-center max-w-xl mx-auto mb-10 reveal">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-2" data-i18n="home.faq.title"></h2>
+        <p class="text-ink-600" data-i18n="home.faq.subtitle"></p>
+      </div>
+      <div class="max-w-2xl mx-auto space-y-3 mb-8">
+        <details class="surface-card p-5 reveal"><summary class="font-bold cursor-pointer list-none flex items-center justify-between gap-4"><span data-i18n="home.faq.q1.q"></span><span class="shrink-0">+</span></summary><p class="text-ink-600 text-sm mt-3" data-i18n="home.faq.q1.a"></p></details>
+        <details class="surface-card p-5 reveal"><summary class="font-bold cursor-pointer list-none flex items-center justify-between gap-4"><span data-i18n="home.faq.q2.q"></span><span class="shrink-0">+</span></summary><p class="text-ink-600 text-sm mt-3" data-i18n="home.faq.q2.a"></p></details>
+        <details class="surface-card p-5 reveal"><summary class="font-bold cursor-pointer list-none flex items-center justify-between gap-4"><span data-i18n="home.faq.q3.q"></span><span class="shrink-0">+</span></summary><p class="text-ink-600 text-sm mt-3" data-i18n="home.faq.q3.a"></p></details>
+        <details class="surface-card p-5 reveal"><summary class="font-bold cursor-pointer list-none flex items-center justify-between gap-4"><span data-i18n="home.faq.q4.q"></span><span class="shrink-0">+</span></summary><p class="text-ink-600 text-sm mt-3" data-i18n="home.faq.q4.a"></p></details>
+        <details class="surface-card p-5 reveal"><summary class="font-bold cursor-pointer list-none flex items-center justify-between gap-4"><span data-i18n="home.faq.q5.q"></span><span class="shrink-0">+</span></summary><p class="text-ink-600 text-sm mt-3" data-i18n="home.faq.q5.a"></p></details>
+      </div>
+      <div class="text-center reveal"><a href="faq.html" class="btn btn-ghost-light" data-i18n="home.faq.cta"></a></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="hero-navy grain-surface overflow-hidden">
+    <div class="container-5k py-16 md:py-24 text-center reveal">
+      <h2 class="font-display font-bold text-white text-3xl md:text-5xl mb-4 max-w-2xl mx-auto" data-i18n="home.cta.title"></h2>
+      <p class="text-white/60 max-w-lg mx-auto mb-9" data-i18n="home.cta.subtitle"></p>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a href="catalog.html" class="btn btn-primary" data-i18n="home.cta.primary"></a>
+        <a href="#how" class="btn btn-outline" data-i18n="home.cta.secondary"></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/products.js"></script>
+<script>
+  FIVEK.mountLayout("home");
+  document.addEventListener("5k:lang-changed", function (e) { if (window.renderProductGrids) { renderProductGrids(e.detail.lang); FIVEK.refreshReveal(); } });
+  renderProductGrids(FIVEK.getLang());
+  FIVEK.refreshReveal();
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="nav.points">5K Points</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <section class="hero-navy grain-surface overflow-hidden">
+    <div class="container-5k py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="badge badge-yellow mb-4">5K Points</span>
+        <h1 class="font-display font-bold text-white text-3xl md:text-5xl mb-5" data-i18n="points.heroTitle"></h1>
+        <p class="text-white/60 max-w-md mb-8" data-i18n="points.heroDesc"></p>
+        <a href="catalog.html" class="btn btn-primary" data-i18n="points.balanceCta"></a>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <div class="surface-card p-8">
+          <div class="flex items-center justify-between mb-6"><span class="text-ink-500 text-sm font-semibold" data-i18n="home.points.balanceLabel"></span><span class="badge badge-green">Gold</span></div>
+          <div class="font-display font-extrabold text-navy-900 text-5xl mb-1">1 250</div>
+          <div class="text-ink-400 text-sm mb-8">Points ≈ 1 250 ₸</div>
+          <div class="h-2 bg-paper-100 rounded-full overflow-hidden mb-2"><div class="h-full w-2/3 bg-gradient-to-r from-gold-400 to-gold-500 rounded-full"></div></div>
+          <div class="text-ink-400 text-xs">750 <span data-i18n="points.toNextLevel"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-elevated">
+    <div class="container-5k py-16 md:py-20">
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-10 text-center reveal" data-i18n="points.sourcesTitle"></h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="points-sources"></div>
+    </div>
+  </section>
+
+  <section class="section-paper border-y border-line">
+    <div class="container-5k py-16 md:py-20">
+      <div class="mb-8 reveal">
+        <h2 class="font-display font-bold text-3xl mb-2" data-i18n="points.historyTitle"></h2>
+        <p class="text-ink-600" data-i18n="points.historyDesc"></p>
+      </div>
+      <div class="surface-card overflow-hidden reveal">
+        <div class="divide-y divide-line" id="points-history"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-elevated">
+    <div class="container-5k py-16 md:py-20 grid lg:grid-cols-2 gap-12">
+      <div class="reveal">
+        <h2 class="font-display font-bold text-3xl mb-6" data-i18n="points.rulesTitle"></h2>
+        <ul class="space-y-4">
+          <li class="flex gap-3 items-start"><span class="w-6 h-6 rounded-full bg-gold-400/20 text-gold-600 flex items-center justify-center shrink-0 mt-0.5">✓</span><span class="text-ink-700" data-i18n="points.rule1"></span></li>
+          <li class="flex gap-3 items-start"><span class="w-6 h-6 rounded-full bg-gold-400/20 text-gold-600 flex items-center justify-center shrink-0 mt-0.5">✓</span><span class="text-ink-700" data-i18n="points.rule2"></span></li>
+          <li class="flex gap-3 items-start"><span class="w-6 h-6 rounded-full bg-gold-400/20 text-gold-600 flex items-center justify-center shrink-0 mt-0.5">✓</span><span class="text-ink-700" data-i18n="points.rule3"></span></li>
+          <li class="flex gap-3 items-start"><span class="w-6 h-6 rounded-full bg-gold-400/20 text-gold-600 flex items-center justify-center shrink-0 mt-0.5">✓</span><span class="text-ink-700" data-i18n="points.rule4"></span></li>
+        </ul>
+      </div>
+      <div class="reveal surface-card p-6 bg-paper-100 border-0" style="transition-delay:.1s">
+        <p class="text-ink-500 text-sm leading-relaxed" data-i18n="points.note"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script>
+  FIVEK.mountLayout("points");
+
+  var SOURCES = [
+    { key: "reg", icon: "★" }, { key: "purchase", icon: "🛒" }, { key: "review", icon: "✎" },
+    { key: "task", icon: "🎮" }, { key: "referral", icon: "👥" }, { key: "promo", icon: "🎁" }
+  ];
+  document.getElementById("points-sources").innerHTML = SOURCES.map(function (s) {
+    return '<div class="surface-card p-6 reveal">' +
+      '<div class="flex items-center justify-between mb-4"><span class="w-11 h-11 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-lg">' + s.icon + '</span><span class="font-display font-extrabold text-gold-600 text-lg" data-i18n="points.source.' + s.key + '.value"></span></div>' +
+      '<div class="font-bold mb-1" data-i18n="points.source.' + s.key + '.title"></div>' +
+      '<div class="text-ink-500 text-sm" data-i18n="points.source.' + s.key + '.desc"></div>' +
+    '</div>';
+  }).join("");
+
+  var HISTORY = [
+    { key: "points.hist1", amount: "+120" }, { key: "points.hist2", amount: "+40" },
+    { key: "points.hist3", amount: "+250" }, { key: "points.hist4", amount: "-300" },
+    { key: "points.hist5", amount: "+10" }
+  ];
+  function renderHistory(lang) {
+    document.getElementById("points-history").innerHTML = HISTORY.map(function (h) {
+      var positive = h.amount.indexOf("-") !== 0;
+      return '<div class="flex items-center justify-between px-6 py-4">' +
+        '<span class="text-sm font-medium">' + FIVEK.t(h.key, lang) + '</span>' +
+        '<span class="font-bold text-sm ' + (positive ? "text-leaf-600" : "text-ink-400") + '">' + h.amount + ' Points</span>' +
+      '</div>';
+    }).join("");
+  }
+  renderHistory(FIVEK.getLang());
+  document.addEventListener("5k:lang-changed", function (e) { renderHistory(e.detail.lang); });
+
+  FIVEK.applyI18n(FIVEK.getLang());
+  FIVEK.refreshReveal();
+  document.addEventListener("5k:lang-changed", function () { FIVEK.refreshReveal(); });
+</script>
+</body>
+</html>

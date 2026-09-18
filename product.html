@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>5K — Товар</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <div class="container-5k pt-6 pb-2">
+    <nav class="flex items-center gap-2 text-xs text-ink-400 mb-6 flex-wrap">
+      <a href="index.html" class="hover:text-gold-600" data-i18n="breadcrumb.home"></a>
+      <span>/</span>
+      <a href="catalog.html" class="hover:text-gold-600" data-i18n="product.breadcrumbCatalog"></a>
+      <span>/</span>
+      <span class="text-ink-700 font-semibold" id="pd-name-crumb"></span>
+    </nav>
+  </div>
+
+  <div class="container-5k pb-16">
+    <div class="grid lg:grid-cols-2 gap-10 mb-16">
+      <!-- Gallery -->
+      <div>
+        <div class="surface-card overflow-hidden aspect-square mb-4" id="pd-main-image"></div>
+        <div class="grid grid-cols-4 gap-3" id="pd-thumbs"></div>
+      </div>
+
+      <!-- Info -->
+      <div>
+        <span class="badge badge-yellow mb-3" id="pd-badge"></span>
+        <h1 class="font-display font-bold text-2xl md:text-3xl mb-3" id="pd-title"></h1>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="stars">★★★★★</span>
+          <span class="text-ink-500 text-sm" id="pd-rating"></span>
+        </div>
+        <div class="flex items-end gap-3 mb-2">
+          <span class="font-display font-extrabold text-3xl text-navy-900" id="pd-price"></span>
+          <span class="text-ink-400 line-through text-lg" id="pd-old-price"></span>
+        </div>
+        <p class="text-leaf-600 text-sm font-semibold mb-6"><span data-i18n="product.pointsEarn"></span> <span id="pd-points">+250</span> <span data-i18n="common.points"></span></p>
+
+        <div class="flex items-center gap-2 mb-6">
+          <span class="badge badge-green" data-i18n="product.inStock"></span>
+        </div>
+
+        <div class="flex items-center gap-4 mb-6">
+          <span class="text-sm font-semibold text-ink-600" data-i18n="product.qty"></span>
+          <div class="flex items-center border border-line rounded-full overflow-hidden">
+            <button type="button" class="w-9 h-9 flex items-center justify-center hover:bg-paper-100" data-qty-minus>−</button>
+            <span class="w-10 text-center font-bold" data-qty-value>1</span>
+            <button type="button" class="w-9 h-9 flex items-center justify-center hover:bg-paper-100" data-qty-plus>+</button>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mb-8">
+          <button type="button" class="btn btn-primary" data-add-to-cart data-i18n="product.buyNow"></button>
+          <button type="button" class="btn btn-ghost-light" data-add-to-cart data-i18n="product.addToCart"></button>
+          <button type="button" class="icon-btn !bg-paper-100 !border-line !text-ink-700" aria-label="favorite">♡</button>
+        </div>
+
+        <div class="surface-card p-5 flex items-start gap-3">
+          <span class="w-9 h-9 rounded-xl bg-paper-100 flex items-center justify-center shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="1" y="7" width="15" height="10" rx="2"/><path d="M16 10h3.5L22 13.5V17h-6"/><circle cx="6" cy="19.5" r="1.7"/><circle cx="18" cy="19.5" r="1.7"/></svg></span>
+          <div>
+            <div class="font-bold text-sm mb-1" data-i18n="product.deliveryTitle"></div>
+            <p class="text-ink-500 text-xs leading-relaxed" data-i18n="product.deliveryText"></p>
+            <p class="text-ink-500 text-xs leading-relaxed mt-1" data-i18n="product.returnText"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="mb-16">
+      <div class="reviews-tabs mb-6" data-reviews-tabs>
+        <button type="button" class="reviews-tab active" data-reviews-tab="description" data-i18n="product.tab.description"></button>
+        <button type="button" class="reviews-tab" data-reviews-tab="specs" data-i18n="product.tab.specs"></button>
+        <button type="button" class="reviews-tab" data-reviews-tab="reviews" data-i18n="product.tab.reviews"></button>
+        <button type="button" class="reviews-tab" data-reviews-tab="delivery" data-i18n="product.tab.delivery"></button>
+      </div>
+      <div data-reviews-panel="description" class="surface-card p-6 md:p-8 max-w-2xl">
+        <p class="text-ink-600 leading-relaxed" data-i18n="product.descriptionText"></p>
+      </div>
+      <div data-reviews-panel="specs" class="hidden surface-card p-6 md:p-8 max-w-2xl">
+        <dl class="divide-y divide-line text-sm">
+          <div class="flex justify-between py-3"><dt class="text-ink-500" data-i18n="product.spec.brand"></dt><dd class="font-semibold">5K Selection</dd></div>
+          <div class="flex justify-between py-3"><dt class="text-ink-500" data-i18n="product.spec.warranty"></dt><dd class="font-semibold" data-i18n="product.warrantyValue"></dd></div>
+          <div class="flex justify-between py-3"><dt class="text-ink-500" data-i18n="product.spec.country"></dt><dd class="font-semibold" data-i18n="product.countryValue"></dd></div>
+          <div class="flex justify-between py-3"><dt class="text-ink-500" data-i18n="product.spec.weight"></dt><dd class="font-semibold" data-i18n="product.weightValue"></dd></div>
+        </dl>
+      </div>
+      <div data-reviews-panel="reviews" class="hidden">
+        <div class="grid md:grid-cols-2 gap-4 max-w-3xl">
+          <div class="surface-card p-5"><div class="stars text-sm mb-2">★★★★★</div><p class="text-sm text-ink-700 mb-3" data-i18n="product.review1"></p><div class="flex items-center justify-between"><span class="font-bold text-sm">Марат Ж.</span><span class="badge badge-green" data-i18n="product.verifiedPurchase"></span></div></div>
+          <div class="surface-card p-5"><div class="stars text-sm mb-2">★★★★★</div><p class="text-sm text-ink-700 mb-3" data-i18n="product.review2"></p><div class="flex items-center justify-between"><span class="font-bold text-sm">Гульнара С.</span><span class="badge badge-green" data-i18n="product.verifiedPurchase"></span></div></div>
+        </div>
+      </div>
+      <div data-reviews-panel="delivery" class="hidden surface-card p-6 md:p-8 max-w-2xl">
+        <p class="text-ink-600 leading-relaxed" data-i18n="product.deliveryText"></p>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div>
+      <h2 class="font-display font-bold text-2xl mb-6" data-i18n="product.relatedTitle"></h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="related-grid"></div>
+    </div>
+  </div>
+</main>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/products.js"></script>
+<script>
+  FIVEK.mountLayout("catalog");
+
+  function getProduct() {
+    var params = new URLSearchParams(location.search);
+    var slug = params.get("slug");
+    return FIVEK_PRODUCTS.find(function (p) { return p.slug === slug; }) || FIVEK_PRODUCTS[0];
+  }
+
+  function renderProduct(lang) {
+    var p = getProduct();
+    var name = p.name[lang] || p.name.ru;
+    document.title = name + " — 5K";
+    document.getElementById("pd-name-crumb").textContent = name;
+    document.getElementById("pd-title").textContent = name;
+    document.getElementById("pd-rating").textContent = p.rating + " · " + p.reviews + " " + FIVEK.t("common.reviewsCount", lang);
+    document.getElementById("pd-price").textContent = p.price.toLocaleString("ru-RU") + " ₸";
+    document.getElementById("pd-old-price").textContent = p.old ? p.old.toLocaleString("ru-RU") + " ₸" : "";
+    document.getElementById("pd-points").textContent = "+" + Math.round(p.price * 0.05);
+    document.getElementById("pd-badge").textContent = FIVEK.t(p.badge === "new" ? "common.newBadge" : (p.badge === "sale" ? "common.saleBadge" : "common.hotBadge"), lang);
+
+    var mainImg = document.getElementById("pd-main-image");
+    mainImg.innerHTML = '<img src="https://placehold.co/700x700/' + p.color + '?text=' + encodeURIComponent(name.split(" ")[0]) + '" class="w-full h-full object-cover" alt="' + name + '" />';
+
+    var thumbs = document.getElementById("pd-thumbs");
+    thumbs.innerHTML = [1, 2, 3, 4].map(function (i) {
+      return '<button type="button" class="surface-card aspect-square overflow-hidden p-0"><img src="https://placehold.co/200x200/' + p.color + '?text=' + i + '" class="w-full h-full object-cover" alt="" /></button>';
+    }).join("");
+
+    var related = FIVEK_PRODUCTS.filter(function (x) { return x.cat === p.cat && x.id !== p.id; }).slice(0, 4);
+    if (related.length < 4) related = related.concat(FIVEK_PRODUCTS.filter(function (x) { return x.id !== p.id && related.indexOf(x) === -1; }).slice(0, 4 - related.length));
+    document.getElementById("related-grid").innerHTML = related.map(function (x) { return productCardHTML(x, lang); }).join("");
+
+    FIVEK.applyI18n(lang);
+    FIVEK.refreshReveal();
+  }
+
+  var qty = 1;
+  document.addEventListener("click", function (e) {
+    if (e.target.closest("[data-qty-plus]")) { qty++; document.querySelector("[data-qty-value]").textContent = qty; }
+    if (e.target.closest("[data-qty-minus]") && qty > 1) { qty--; document.querySelector("[data-qty-value]").textContent = qty; }
+  });
+
+  document.addEventListener("5k:lang-changed", function (e) { renderProduct(e.detail.lang); });
+  renderProduct(FIVEK.getLang());
+</script>
+</body>
+</html>

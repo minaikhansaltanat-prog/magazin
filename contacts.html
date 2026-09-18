@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="contactsPage.title">Контакты — 5K</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <div class="container-5k pt-10 pb-20">
+    <div class="mb-12 reveal">
+      <h1 class="font-display font-bold text-3xl md:text-4xl mb-2" data-i18n="contactsPage.title"></h1>
+      <p class="text-ink-600" data-i18n="contactsPage.subtitle"></p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
+      <a href="tel:+77770464141" class="surface-card p-5 reveal">
+        <span class="w-10 h-10 rounded-xl bg-paper-100 flex items-center justify-center mb-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a2 2 0 0 0-2-2 2 2 0 0 0-2 2v4H4l1 11h14l1-11h-6Z"/></svg></span>
+        <div class="text-ink-500 text-xs mb-1" data-i18n="contactsPage.phone"></div>
+        <div class="font-bold text-sm">+7 777 046 4141</div>
+      </a>
+      <a href="https://wa.me/77770464141" target="_blank" rel="noopener" class="surface-card p-5 reveal" style="transition-delay:.05s">
+        <span class="w-10 h-10 rounded-xl bg-leaf-500/15 text-leaf-600 flex items-center justify-center mb-3">🟢</span>
+        <div class="text-ink-500 text-xs mb-1" data-i18n="contactsPage.whatsapp"></div>
+        <div class="font-bold text-sm">+7 777 046 4141</div>
+      </a>
+      <a href="mailto:info@5k.kz" class="surface-card p-5 reveal" style="transition-delay:.1s">
+        <span class="w-10 h-10 rounded-xl bg-paper-100 flex items-center justify-center mb-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span>
+        <div class="text-ink-500 text-xs mb-1" data-i18n="contactsPage.email"></div>
+        <div class="font-bold text-sm">info@5k.kz</div>
+      </a>
+      <div class="surface-card p-5 reveal" style="transition-delay:.15s">
+        <span class="w-10 h-10 rounded-xl bg-paper-100 flex items-center justify-center mb-3">📍</span>
+        <div class="text-ink-500 text-xs mb-1" data-i18n="contactsPage.address"></div>
+        <div class="font-bold text-sm" data-i18n="contactsPage.addressValue"></div>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10">
+      <div class="reveal">
+        <h2 class="font-display font-bold text-2xl mb-6" data-i18n="contactsPage.formTitle"></h2>
+        <form class="surface-card p-6 space-y-4" onsubmit="return false">
+          <div><label class="text-xs font-semibold text-ink-500 mb-1.5 block" data-i18n="contactsPage.formName"></label><input type="text" class="w-full border border-line rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gold-400" /></div>
+          <div><label class="text-xs font-semibold text-ink-500 mb-1.5 block" data-i18n="contactsPage.formPhone"></label><input type="tel" class="w-full border border-line rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gold-400" /></div>
+          <div><label class="text-xs font-semibold text-ink-500 mb-1.5 block" data-i18n="contactsPage.formEmail"></label><input type="email" class="w-full border border-line rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gold-400" /></div>
+          <div><label class="text-xs font-semibold text-ink-500 mb-1.5 block" data-i18n="contactsPage.formMessage"></label><textarea rows="4" class="w-full border border-line rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-gold-400"></textarea></div>
+          <label class="flex items-start gap-2 text-xs text-ink-500"><input type="checkbox" class="mt-0.5 accent-gold-400" /><span data-i18n="contactsPage.formConsent"></span></label>
+          <button type="submit" class="btn btn-primary w-full" data-i18n="contactsPage.formSubmit"></button>
+        </form>
+      </div>
+      <div class="reveal" style="transition-delay:.1s">
+        <h2 class="font-display font-bold text-2xl mb-6" data-i18n="contactsPage.mapTitle"></h2>
+        <div class="surface-card overflow-hidden h-72 mb-4">
+          <img src="https://placehold.co/700x500/EEF0F3/5B6472?text=2GIS+Map" alt="2GIS карта" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <a href="https://2gis.kz/almaty/search/5K" target="_blank" rel="noopener" class="gis-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="white" fill-opacity=".18"/><path d="M12 6a6 6 0 0 0-6 6c0 4.5 6 10 6 10s6-5.5 6-10a6 6 0 0 0-6-6Zm0 8.2A2.2 2.2 0 1 1 12 9.8a2.2 2.2 0 0 1 0 4.4Z" fill="white"/></svg>
+          <span data-i18n="home.reviews.gis.cta"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script>FIVEK.mountLayout("contacts");</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "5k-web-portal",
+  "version": "1.0.0",
+  "description": "5K — BUY, PLAY, EARN web portal (frontend static build)",
+  "private": true,
+  "scripts": {
+    "start": "node serve.mjs",
+    "screenshot": "node screenshot.mjs"
+  },
+  "dependencies": {
+    "puppeteer": "^25.11.0"
+  }
+}

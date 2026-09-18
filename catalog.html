@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="catalog.title">Каталог товаров — 5K</title>
+<meta name="description" content="Каталог товаров 5K: электроника, дом, авто, красота, спорт и другие категории." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <div class="container-5k pt-6 pb-2">
+    <nav class="flex items-center gap-2 text-xs text-ink-400 mb-4">
+      <a href="index.html" class="hover:text-gold-600" data-i18n="breadcrumb.home"></a>
+      <span>/</span>
+      <span class="text-ink-700 font-semibold" data-i18n="nav.catalog"></span>
+    </nav>
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+      <h1 class="font-display font-bold text-3xl md:text-4xl" data-i18n="catalog.title"></h1>
+      <div class="flex items-center gap-3">
+        <button type="button" class="btn btn-ghost-light lg:hidden" data-filter-open><span data-i18n="catalog.filtersBtn"></span></button>
+        <select id="catalog-sort" class="select-5k">
+          <option value="popular" data-i18n="catalog.sort.popular"></option>
+          <option value="priceAsc" data-i18n="catalog.sort.priceAsc"></option>
+          <option value="priceDesc" data-i18n="catalog.sort.priceDesc"></option>
+          <option value="rating" data-i18n="catalog.sort.rating"></option>
+          <option value="new" data-i18n="catalog.sort.new"></option>
+        </select>
+      </div>
+    </div>
+    <p class="text-ink-500 text-sm mb-8"><span data-i18n="catalog.foundLabel"></span>: <strong id="catalog-count" class="text-ink-900">14</strong></p>
+  </div>
+
+  <div class="container-5k pb-20">
+    <div class="grid lg:grid-cols-[240px_1fr] gap-8">
+      <!-- Sidebar (desktop) -->
+      <aside class="hidden lg:block">
+        <div class="surface-card p-4 sticky" style="top: calc(var(--header-h) + 16px)">
+          <h2 class="font-display font-bold text-sm px-2 mb-2" data-i18n="catalog.allCategories"></h2>
+          <nav class="space-y-1" id="cat-sidebar"></nav>
+        </div>
+      </aside>
+
+      <!-- Grid -->
+      <div>
+        <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6" id="catalog-grid"></div>
+        <div id="catalog-empty" class="hidden text-center py-20">
+          <div class="font-display font-bold text-xl mb-2" data-i18n="catalog.empty.title"></div>
+          <p class="text-ink-500 text-sm" data-i18n="catalog.empty.desc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Mobile filter drawer -->
+<div class="mobile-menu-overlay" data-filter-overlay></div>
+<div class="mobile-menu-panel" data-filter-panel>
+  <div class="flex items-center justify-between mb-6">
+    <span class="font-display font-bold text-white text-base" data-i18n="catalog.filters.title"></span>
+    <button type="button" class="close-btn" data-filter-close aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+  </div>
+  <nav class="space-y-1 mb-6" id="cat-sidebar-mobile"></nav>
+  <div class="space-y-1 border-t border-white/10 pt-5">
+    <label class="checkbox-row text-white"><input type="checkbox" /><span data-i18n="catalog.filters.availability"></span></label>
+    <label class="checkbox-row text-white"><input type="checkbox" /><span data-i18n="catalog.filters.new"></span></label>
+    <label class="checkbox-row text-white"><input type="checkbox" /><span data-i18n="catalog.filters.sale"></span></label>
+    <label class="checkbox-row text-white"><input type="checkbox" /><span data-i18n="catalog.filters.points"></span></label>
+  </div>
+  <div class="mt-auto pt-6 flex flex-col gap-2">
+    <button type="button" class="btn btn-primary w-full" data-filter-apply data-i18n="catalog.filters.apply"></button>
+    <button type="button" class="btn btn-outline w-full !text-ink-900 !border-white/20" data-filters-reset data-filter-apply data-i18n="catalog.filters.reset"></button>
+  </div>
+</div>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/products.js"></script>
+<script>
+  FIVEK.mountLayout("catalog");
+
+  var CAT_ICONS = {
+    "": '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+    electronics: '<rect x="4" y="2" width="16" height="20" rx="3"/><line x1="10" y1="19" x2="14" y2="19"/>',
+    home: '<path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/>',
+    auto: '<path d="M3 13l2-6h14l2 6"/><rect x="2" y="13" width="20" height="6" rx="2"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/>',
+    beauty: '<path d="m12 2 2.2 5.6L20 9l-4.4 3.6L17 19l-5-3.2L7 19l1.4-6.4L4 9l5.8-1.4Z"/>',
+    sport: '<path d="M6.5 6.5 3 3m14.5 3.5L21 3M6.5 17.5 3 21m14.5-3.5L21 21"/><rect x="7" y="7" width="10" height="10" rx="3"/>',
+    games: '<rect x="2" y="7" width="20" height="10" rx="5"/><line x1="7" y1="12" x2="11" y2="12"/><line x1="9" y1="10" x2="9" y2="14"/><circle cx="16" cy="10.5" r="1"/><circle cx="18" cy="13" r="1"/>',
+    gifts: '<rect x="3" y="9" width="18" height="12" rx="2"/><path d="M3 9h18v4H3z"/><line x1="12" y1="9" x2="12" y2="21"/><path d="M12 9C9 9 8 4 12 4s3 5 0 5Zm0 0c3 0 4-5 0-5s-3 5 0 5Z"/>',
+    accessories: '<path d="M6 7V5a3 3 0 0 1 6 0v2"/><rect x="3" y="7" width="12" height="13" rx="2"/><path d="M17 10h4v9h-4z"/>'
+  };
+
+  function catIconSvg(key) {
+    return '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + (CAT_ICONS[key] || '') + '</svg>';
+  }
+
+  function buildSidebar(targetId) {
+    var host = document.getElementById(targetId);
+    if (!host) return;
+    var html = '<button type="button" class="cat-btn" data-cat-btn="all">' + catIconSvg('') + '<span data-i18n="catalog.allCategories"></span></button>';
+    Object.keys(FIVEK_CAT_KEYS).forEach(function (key) {
+      html += '<button type="button" class="cat-btn" data-cat-btn="' + key + '">' + catIconSvg(key) + '<span data-i18n="' + FIVEK_CAT_KEYS[key] + '"></span></button>';
+    });
+    host.innerHTML = html;
+  }
+  buildSidebar("cat-sidebar");
+  buildSidebar("cat-sidebar-mobile");
+  FIVEK.applyI18n(FIVEK.getLang());
+
+  document.addEventListener("5k:lang-changed", function () {});
+  initCatalogPage();
+</script>
+</body>
+</html>

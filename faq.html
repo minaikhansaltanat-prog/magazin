@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="faqPage.title">FAQ — 5K</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <div class="container-5k pt-10 pb-20">
+    <div class="text-center max-w-xl mx-auto mb-12 reveal">
+      <h1 class="font-display font-bold text-3xl md:text-4xl mb-2" data-i18n="faqPage.title"></h1>
+      <p class="text-ink-600" data-i18n="faqPage.subtitle"></p>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-10" id="faq-groups"></div>
+  </div>
+</main>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script>
+  FIVEK.mountLayout("faq");
+
+  var GROUPS = [
+    { key: "shopping", items: ["home.faq.q1", "home.faq.q5"] },
+    { key: "points", items: ["home.faq.q2"] },
+    { key: "game", items: ["home.faq.q3"] },
+    { key: "earn", items: ["home.faq.q4"] },
+    { key: "delivery", items: ["faqPage.d1", "faqPage.d2"] },
+    { key: "returns", items: ["faqPage.r1", "faqPage.r2"] }
+  ];
+
+  function renderFaq() {
+    document.getElementById("faq-groups").innerHTML = GROUPS.map(function (g) {
+      var items = g.items.map(function (base) {
+        return '<details class="surface-card p-5"><summary class="font-bold cursor-pointer list-none flex items-center justify-between gap-4"><span data-i18n="' + base + '.q"></span><span class="shrink-0">+</span></summary><p class="text-ink-600 text-sm mt-3" data-i18n="' + base + '.a"></p></details>';
+      }).join("");
+      return '<div class="reveal"><h2 class="font-display font-bold text-xl mb-4 flex items-center gap-2"><span class="badge badge-navy" data-i18n="faqPage.cat.' + g.key + '"></span></h2><div class="space-y-3">' + items + '</div></div>';
+    }).join("");
+    FIVEK.applyI18n(FIVEK.getLang());
+    FIVEK.refreshReveal();
+  }
+  renderFaq();
+  document.addEventListener("5k:lang-changed", renderFaq);
+</script>
+</body>
+</html>

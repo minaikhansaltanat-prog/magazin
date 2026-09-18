@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title data-i18n="profilePage.title">Личный кабинет — 5K</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600;700;800;900&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="section-paper font-body text-ink-900">
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="app-header"></div>
+
+<main id="main">
+  <div class="container-5k pt-8 pb-20">
+    <div class="grid lg:grid-cols-[260px_1fr] gap-8">
+      <aside class="hidden lg:block">
+        <div class="surface-card p-4 sticky" style="top: calc(var(--header-h) + 16px)">
+          <div class="flex items-center gap-3 px-2 py-3 mb-2 border-b border-line">
+            <span class="w-11 h-11 rounded-full bg-navy-900 text-gold-400 flex items-center justify-center font-display font-bold">АЖ</span>
+            <div><div class="font-bold text-sm">Азамат Ж.</div><div class="text-ink-400 text-xs">+7 777 *** 41 41</div></div>
+          </div>
+          <nav class="space-y-1 pt-2" id="profile-nav"></nav>
+        </div>
+      </aside>
+
+      <div>
+        <div class="hero-navy grain-surface rounded-xl p-6 md:p-8 mb-8 reveal">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div>
+              <p class="text-white/50 text-sm mb-1"><span data-i18n="profilePage.greeting"></span>, Азамат!</p>
+              <div class="flex items-center gap-3">
+                <span class="font-display font-extrabold text-gold-400 text-3xl">1 250</span>
+                <span class="text-white/60 text-sm"><span data-i18n="common.points"></span></span>
+                <span class="badge badge-yellow" data-i18n="profilePage.levelValue"></span>
+              </div>
+            </div>
+            <a href="points.html" class="btn btn-primary shrink-0" data-i18n="home.points.cta"></a>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between mb-5 reveal">
+          <h2 class="font-display font-bold text-xl" data-i18n="profilePage.recentOrders"></h2>
+        </div>
+        <div class="space-y-3 mb-10" id="profile-orders"></div>
+
+        <div class="surface-card p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 reveal">
+          <div class="text-center md:text-left">
+            <h3 class="font-display font-bold text-xl mb-1" data-i18n="profilePage.inviteTitle"></h3>
+            <p class="text-ink-500 text-sm" data-i18n="profilePage.inviteDesc"></p>
+          </div>
+          <a href="earn.html" class="btn btn-primary shrink-0" data-i18n="profilePage.inviteCta"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="app-footer"></div>
+<div id="app-whatsapp"></div>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script>
+  FIVEK.mountLayout("profile");
+
+  var NAV = [
+    ["profilePage.nav.dashboard", "profile.html"], ["profilePage.nav.orders", "profile.html"],
+    ["profilePage.nav.points", "points.html"], ["profilePage.nav.earn", "earn.html"],
+    ["profilePage.nav.game", "game.html"], ["profilePage.nav.favorites", "favorites.html"],
+    ["profilePage.nav.addresses", "profile.html"], ["profilePage.nav.notifications", "profile.html"],
+    ["profilePage.nav.support", "contacts.html"], ["profilePage.nav.logout", "index.html"]
+  ];
+  document.getElementById("profile-nav").innerHTML = NAV.map(function (n, i) {
+    return '<a href="' + n[1] + '" class="cat-btn' + (i === 0 ? " is-active" : "") + '"><span data-i18n="' + n[0] + '"></span></a>';
+  }).join("");
+
+  var ORDERS = [
+    { id: "#45872", date: "18.09.2026", sum: "5 000 ₸", status: "delivered" },
+    { id: "#45871", date: "12.09.2026", sum: "5 000 ₸", status: "transit" },
+    { id: "#45870", date: "05.09.2026", sum: "10 000 ₸", status: "processing" }
+  ];
+  var STATUS_COLOR = { delivered: "badge-green", transit: "badge-yellow", processing: "badge-outline" };
+  document.getElementById("profile-orders").innerHTML = ORDERS.map(function (o) {
+    return '<div class="surface-card p-4 flex items-center justify-between gap-4 reveal">' +
+      '<div class="flex items-center gap-4"><span class="font-bold text-sm">' + o.id + '</span><span class="text-ink-400 text-xs">' + o.date + '</span></div>' +
+      '<div class="flex items-center gap-4"><span class="badge ' + STATUS_COLOR[o.status] + '" data-i18n="profilePage.orderStatus.' + o.status + '"></span><span class="font-display font-bold text-sm">' + o.sum + '</span></div>' +
+    '</div>';
+  }).join("");
+
+  FIVEK.applyI18n(FIVEK.getLang());
+  FIVEK.refreshReveal();
+  document.addEventListener("5k:lang-changed", function () { FIVEK.refreshReveal(); });
+</script>
+</body>
+</html>
