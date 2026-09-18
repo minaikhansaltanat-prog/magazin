@@ -35,6 +35,11 @@
 
   var BADGE_KEY = { new: "common.newBadge", hot: "common.hotBadge", sale: "common.saleBadge" };
 
+  function productImages(p) {
+    var base = "assets/img/products/" + p.slug + "/";
+    return [base + "1.jpg", base + "2.jpg", base + "3.jpg", base + "4.jpg"];
+  }
+
   function tt(key, lang) {
     var dict = (window.I18N && window.I18N[lang]) || {};
     return dict[key] || (window.I18N && window.I18N.ru[key]) || "";
@@ -47,7 +52,7 @@
     return (
       '<div class="surface-card overflow-hidden flex flex-col reveal">' +
         '<a href="product.html?slug=' + p.slug + '" class="relative block aspect-square bg-paper-100 overflow-hidden group">' +
-          '<img src="https://placehold.co/500x500/' + p.color + '?text=' + encodeURIComponent(name.split(" ")[0]) + '" alt="' + name + '" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />' +
+          '<img src="' + productImages(p)[0] + '" alt="' + name + '" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />' +
           '<span class="absolute top-3 left-3 badge ' + badgeClass + '">' + tt(BADGE_KEY[p.badge], lang) + '</span>' +
           '<button type="button" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 flex items-center justify-center text-ink-700 hover:text-gold-600 transition-colors duration-200" aria-label="favorite">' + (window.FIVEK_ICONS ? window.FIVEK_ICONS.heart : "♡") + '</button>' +
         '</a>' +
@@ -142,6 +147,7 @@
   }
 
   window.FIVEK_PRODUCTS = PRODUCTS;
+  window.productImages = productImages;
   window.FIVEK_CAT_KEYS = CAT_KEYS;
   window.productCardHTML = productCardHTML;
   window.renderProductGrids = renderProductGrids;

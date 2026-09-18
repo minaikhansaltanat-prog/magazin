@@ -144,12 +144,13 @@
     document.getElementById("pd-points").textContent = "+" + Math.round(p.price * 0.05);
     document.getElementById("pd-badge").textContent = FIVEK.t(p.badge === "new" ? "common.newBadge" : (p.badge === "sale" ? "common.saleBadge" : "common.hotBadge"), lang);
 
+    var images = productImages(p);
     var mainImg = document.getElementById("pd-main-image");
-    mainImg.innerHTML = '<img src="https://placehold.co/700x700/' + p.color + '?text=' + encodeURIComponent(name.split(" ")[0]) + '" class="w-full h-full object-cover" alt="' + name + '" />';
+    mainImg.innerHTML = '<img src="' + images[0] + '" class="w-full h-full object-cover" alt="' + name + '" id="pd-main-img-tag" />';
 
     var thumbs = document.getElementById("pd-thumbs");
-    thumbs.innerHTML = [1, 2, 3, 4].map(function (i) {
-      return '<button type="button" class="surface-card aspect-square overflow-hidden p-0"><img src="https://placehold.co/200x200/' + p.color + '?text=' + i + '" class="w-full h-full object-cover" alt="" /></button>';
+    thumbs.innerHTML = images.map(function (src, i) {
+      return '<button type="button" class="surface-card aspect-square overflow-hidden p-0' + (i === 0 ? " ring-2 ring-gold-400" : "") + '" data-thumb data-src="' + src + '"><img src="' + src + '" class="w-full h-full object-cover" alt="' + name + ' ' + (i + 1) + '" /></button>';
     }).join("");
 
     var related = FIVEK_PRODUCTS.filter(function (x) { return x.cat === p.cat && x.id !== p.id; }).slice(0, 4);
@@ -164,6 +165,14 @@
   document.addEventListener("click", function (e) {
     if (e.target.closest("[data-qty-plus]")) { qty++; document.querySelector("[data-qty-value]").textContent = qty; }
     if (e.target.closest("[data-qty-minus]") && qty > 1) { qty--; document.querySelector("[data-qty-value]").textContent = qty; }
+
+    var thumb = e.target.closest("[data-thumb]");
+    if (thumb) {
+      var img = document.getElementById("pd-main-img-tag");
+      if (img) img.src = thumb.getAttribute("data-src");
+      document.querySelectorAll("[data-thumb]").forEach(function (b) { b.classList.remove("ring-2", "ring-gold-400"); });
+      thumb.classList.add("ring-2", "ring-gold-400");
+    }
   });
 
   document.addEventListener("5k:lang-changed", function (e) { renderProduct(e.detail.lang); });
